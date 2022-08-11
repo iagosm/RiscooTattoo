@@ -1,0 +1,409 @@
+/* 
+  Base nos arquivos enviados pela Natasha e pela Lara em 22/07/2022
+  Atualizado em 24/07/2022 por Jônatas
+  Navbar em posição fixa
+  Menu mobile funcionando com a redução da largura do navegador
+  Adicionado o efeito de hover no menu mobile
+  Melhora na responsividade da página com a redução da largura do navegador
+    Alteração automática de parâmetros na folha de estilos sobre.css
+  Adicionado a seção do rodapé
+  Removido a seção de cards 
+*/
+ 
+
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+html body {
+    scroll-behavior: smooth;
+    /* min-height: 100%; */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+}
+
+
+/* Video do Hero*/
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 40px;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+}
+  
+/* conteúdo no video */
+.content {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.404));
+    color: #f1f1f1;
+    /* width: 90vw; */
+    /* padding: 20px; */
+    padding-left: 30rem;
+    margin-bottom: 40vh;
+    text-align: center;
+    font-weight: 500;
+    line-height: 3rem;
+    /* font-size: 1.4rem; */
+    letter-spacing: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    overflow: hidden; /* o conteúdo não será revelado até ocorrer a animação */
+    border-right: .15em solid var(--corRosa); /* cor do traço de digito */
+    white-space: nowrap; /* manter o conteudo em uma linha */
+    margin: auto;  /*dar ao scroll o efeito de digitando */
+    letter-spacing: .10em; 
+    animation: 
+      typing 3s steps(60, end),
+      blink-caret .80s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+}
+  
+  /* efeito do cursor*/
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--corRosa); }
+}
+  
+/* Seção 'sobre' */
+.sobre {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0% 20%;
+    justify-content:center;
+    align-items: center;
+    /* padding: 30px; */
+}
+
+.sobre h2,
+.filosofia h2 {
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 2.8rem;
+    color: var(--corRosa);
+    letter-spacing: 4px;
+}
+
+.sobre p,
+.filosofia p {
+    padding: 10px;
+    text-align: justify;
+    line-height: 2;
+    font-size: 1rem;
+    padding-bottom: 35px;
+}
+
+/* div filosofia */
+.filosofia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    /* margin: 80px 380px; */
+    padding: 20px;
+    width: 100%;
+}
+
+.localizacao img {
+    padding: 10px;
+}
+
+/* seção localizacao */
+.localizacao {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.localizacao h2 {
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 2.8rem;
+    color: var(--corRosa);
+    letter-spacing: 4px;
+}
+
+.localizacao span {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.localizacao iframe {
+    padding: 10px;
+}
+
+/* FAQ */
+.faq-heading{
+    font-weight: 600;
+    line-height: 1.8rem;
+    font-size: 2.8rem;
+    color: var(--corRosa);
+    letter-spacing: 4px;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.faq-container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+
+/* Estilo para os botões de abrir e fechar as perguntas */
+.faq-page {
+    color: var(--corRosa);
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
+}
+
+
+/* Adiciona um cor de fundo no botão quando clicado em (add the .active class with JS), e quando o mouse passa por cima (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+
+/* Estila do painel FAQ */
+.faq-body {
+    padding: 0 18px;
+    background-color: var(--corPreta);
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.cookie {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: small;
+    background-color: var(--corRosa);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0, 0.3);
+}
+
+.cookie a {
+    color: var(--corPreta);
+    font-weight: bold;
+}
+
+.cookie a:hover {
+    color:white;
+    font-weight: bold;
+}
+
+.btn-cookie {
+    border-radius: 10px;
+    border: 0;
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: lightgray;
+}
+
+.btn-cookie:hover {
+    background-color: rgb(27, 26, 26);
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 0;
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+}
+
+/* Seção de Cuidados */
+.aftercare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+ .aftercare h2 {
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+    color: var(--corRosa);
+ }
+  
+  
+.aftercare_instrucao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    padding-bottom: 10px;
+}
+
+.aftercare h4 {
+    text-align: justify;
+    margin-left: 186px;
+    line-height: 2;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+}
+
+.aftercare ol, ul {
+    text-align: justify;
+    margin-left: 170px;
+    margin-right: 180px;
+    line-height: 2;
+    font-size: 1rem;
+    padding-bottom: 35px;
+}
+
+
+.tag_privacidade a {
+    padding: 5px;
+    text-decoration: underline;
+    color: var(--corBranca);
+}
+
+
+
+/* .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+    padding-right: 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: var(--corRosa);
+} */
+
+
+/* Media query */
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+    
+
+    .sobre {
+        margin: 5% 5%;
+    }
+
+    .content{
+        font-size: 0.7rem;
+        display: block;
+        /* width: auto; */
+        padding-left: 5rem;
+    }
+
+    .content span::before {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .sobre h2, .filosofia h2 {
+    line-height: 1.6;
+    font-size: 1.4rem;
+    color: var(--corRosa);
+    letter-spacing: 2px;
+    }
+
+    .sobre p, .filosofia p {
+    line-height: 2;
+    font-size: 1rem;
+    }
+
+    .localizacao span {
+        font-size: 0.7rem;
+    }
+    .faq-page {
+        font-size: 1rem;
+    }
+}
+

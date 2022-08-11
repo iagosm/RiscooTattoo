@@ -1,0 +1,115 @@
+/* 
+  Base nos arquivos enviados pela Natasha e pela Lara em 22/07/2022
+  Atualizado em 24/07/2022 por Jônatas
+  Navbar em posição fixa
+  Menu mobile funcionando com a redução da largura do navegador
+  Adicionado o efeito de hover no menu mobile
+  Melhora na responsividade da página com a redução da largura do navegador
+    Alteração automática de parâmetros na folha de estilos sobre.css
+  Adicionado a seção do rodapé
+  Removido a seção de cards 
+*/
+ 
+
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+html body {
+    display:flex;
+    scroll-behavior: smooth;
+    /* min-height: 100%; */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+}
+
+.restante {
+    background-color: aqua;
+    position: fixed;
+    top:75px;
+    padding: 0px 0px;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+/* Video do Hero*/
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 40px;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+}
+  
+/* conteúdo no video */
+.content {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.404));
+    color: #f1f1f1;
+    /* width: 90vw; */
+    /* padding: 20px; */
+    padding-left: 30rem;
+    margin-bottom: 40vh;
+    text-align: center;
+    font-weight: 500;
+    line-height: 3rem;
+    /* font-size: 1.4rem; */
+    letter-spacing: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    overflow: hidden; /* o conteúdo não será revelado até ocorrer a animação */
+    border-right: .15em solid var(--corRosa); /* cor do traço de digito */
+    white-space: nowrap; /* manter o conteudo em uma linha */
+    margin: auto;  /*dar ao scroll o efeito de digitando */
+    letter-spacing: .10em; 
+    animation: 
+      typing 3s steps(60, end),
+      blink-caret .80s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+}
+  
+  /* efeito do cursor*/
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--corRosa); }
+}
+  
+
+
+ 
+/* Media query */
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+    
+}
+

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+html body {
+    scroll-behavior: smooth;
+    /* min-height: 100%; */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+}
+
+  main{
+    height: 100vh;
+    background: url('../img/back-agendamento.jpg') fixed no-repeat;
+    background-size: cover;
+  }
+ 
+  #container{
+    width: 21.875rem;
+    height: 33.27rem;
+    background: inherit;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -250px;
+    border-radius: 8px;
+    padding: 20px 0;
+  }
+  
+  #container:before{
+    width: 37.5rem;
+    height: 40.625rem;
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+    box-shadow: inset 0 0 0 300px rgba(255,280,255,0.2);
+    filter: blur(10px);
+  }
+  form img{
+    max-width:100%;
+    height: 60%;
+    border-radius: 100%;
+  }
+  form{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%,-50%);
+  }
+  input::placeholder{
+    color: rgba(255, 255, 255, 0.62);
+  }
+  input{
+    background: 0;
+    width: 200px;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(255,255,255, 0.3);
+    margin: 20px 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(255,255,255, 0.8);
+  }
+  input[type="submit"]{
+    border: 0;
+    border-radius: 8px;
+    padding-bottom: 0;
+    height: 60px;
+    background: #b31545;
+    color: white;
+    cursor: pointer;  
+  }
+  input[type="submit"]:hover{
+    background: #0b0f1f;
+    transition: 5ms;
+  }
+  span a{
+    color: rgba(255,255,255, 0.8);
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 800px) {
+    
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+        }
+        #container{
+          width: 21.875rem;
+          height: 31.25rem;
+          background: inherit;
+          position: absolute;
+          overflow: hidden;
+          top: 50%;
+          left: 50%;
+          margin-left: -175px;
+          margin-top: -150px;
+          border-radius: 8px;
+          padding: 20px 0;
+        }
+        #container:before{
+          width: 37.5rem;
+          height: 40.625rem;
+          content: "";
+          position: absolute;
+          top: -25px;
+          left: -25px;
+          bottom: 0;
+          right: 0;
+          background: inherit;
+          box-shadow: inset 0 0 0 300px rgba(255,280,255,0.2);
+          filter: blur(10px);
+        }   
+      }
+  /*Fim*/

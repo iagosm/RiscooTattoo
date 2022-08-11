@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <!--Menu html (colar após o body)-->
+    <header>
+      <a href="../index.html"><img src="../img/logo.png" /></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Fim menu-->
+
+    <!-- Inicio do bloco Login -->
+    <main>
+      <div id="container">
+        <form id="register-form-id" action="">
+          <img src="../img/logo.png" />
+          <input
+            name="name-input"
+            type="text"
+            value=""
+            placeholder="Nome Completo"
+            autofocus
+          /><br />
+          <input name="login-input" type="email" placeholder="E-mail" />
+          <!-- <input type="email" placeholder="E-mail"> -->
+          <input name="password-input" type="password" placeholder="Senha" />
+          <input type="password" value="" placeholder="Confirmação de Senha" />
+          <input type="submit" value="Cadastrar" />
+          <span><a href="agendamento.html">Voltar</a></span>
+        </form>
+      </div>
+    </main>
+    <!-- Fim do bloco Login -->
+
+    <footer>
+      <div class="footer-content">
+        <h3>Riscô Tattoo</h3>
+        <p>Estúdio de Tatuagem.</p>
+    
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="artistas.html">Tatuadores</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+          </ul>
+        </div>
+        <div class="tag_privacidade">
+          <a href="privacidade.html">Política de Privacidade</a>
+        </div>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2022, <a href="#">DevEngers Tech</a></p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

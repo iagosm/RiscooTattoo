@@ -1,0 +1,163 @@
+
+
+<!-- Usar como referência o site da w3school.
+link :https://www.w3schools.com/howto/howto_js_slideshow.asp
+link :https://www.w3schools.com/w3css/w3css_slideshow.asp
+link : https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logos.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/tatuador.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Menu html (colar após o body)-->
+    <header>
+      <a href="../index.html"><img src="../img/logo.png" /></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Fim menu-->
+
+      <!--inicio gui!-->
+      <div class="conteudo">
+        <div id="artista1" class="artista1">
+          <h2 class="nome" >Tatuador 2   Guilherme Cabral</h2>
+          <div class="port">
+              <div class="texto">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem possimus molestiae explicabo ipsam? Nesciunt eligendi ipsum totam natus. Aliquid facilis itaque necessitatibus id! Ab sint tenetur aliquam molestiae quo nam.</p>
+              </div>
+              <ul id="imgart">
+                  <li><a href="#img1"><img src="img-artistas/guilherme/tattoo1.jpg" height="200px" alt="" class="min"></a></li>
+                  <li><a href="#img2"><img src="img-artistas/guilherme/tattoo2.jpg" height="200px" alt="" class="min"></a></li>
+                  <li><a href="#img3"><img src="img-artistas/guilherme/tattoo3.jpg" height="200px" alt="" class="min"></a></li>
+                  <li><a href="#img4"><img src="img-artistas/guilherme/tattoo4.jpg" height="200px" alt="" class="min"></a></li>
+                  <li><a href="#img5"><img src="img-artistas/guilherme/tattoo5.jpg" height="200px" alt="" class="min"></a></li>
+                  <li><a href="#img6"><img src="img-artistas/guilherme/tattoo6.jpg" height="200px" alt="" class="min"></a></li>
+              </ul>
+          </div>
+      
+          <div class="lbox" id="img1">
+              <div class="box_img">
+                  <a href="#img6" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="img-artistas/guilherme/tattoo1.jpg" alt="">
+                  <a href="#img2" class="btn" id="next">&#187</a>
+
+              </div>
+
+          </div>
+          <div class="lbox" id="img2">
+              <div class="box_img">
+                  <a href="#img1" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="img-artistas/guilherme/tattoo2.jpg" alt="">
+                  <a href="#img3" class="btn" id="next">&#187</a>
+
+              </div>
+
+          </div>
+          <div class="lbox" id="img3">
+              <div class="box_img">
+                  <a href="#img2" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="img-artistas/guilherme/tattoo3.jpg" alt="">
+                  <a href="#img4" class="btn" id="next">&#187</a>
+
+              </div>
+
+          </div>
+          <div class="lbox" id="img4">
+              <div class="box_img">
+                  <a href="#img3" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="img-artistas/guilherme/tattoo4.jpg" alt="">
+                  <a href="#img5" class="btn" id="next">&#187</a>
+
+              </div>
+
+          </div>
+          <div class="lbox" id="img5">
+              <div class="box_img">
+                  <a href="#img4" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="/img/guilherme/tattoo5.jpg" alt="">
+                  <a href="#img6" class="btn" id="next">&#187</a>
+
+              </div>
+
+          </div>
+          <div class="lbox" id="img6">
+              <div class="box_img">
+                  <a href="#img5" class="btn" id="prev">&#171;</a>
+                  <a href="#gui" class="btn" id="close">X</a>
+                  <img src="/img/guilherme/tattoo6.jpg" alt="">
+                  <a href="#img1" class="btn" id="next">&#187</a>
+              </div>
+
+          </div><!--fim gui!-->
+        </div>
+
+
+      <!-- Seção do footer -->
+        <footer>
+        <div class="footer-content">
+          <h3>Riscô Tattoo</h3>
+          <p>Estúdio de Tatuagem.</p>
+
+          <div class="footer-menu">
+            <ul class="f-menu">
+              <li><a href="../index.html">Home</a></li>
+              <!-- <li><a href="">About</a></li> -->
+              <li><a href="artistas.html">Tatuadores</a></li>
+              <li><a href="agendamento.html">Agendamento</a></li>
+            </ul>
+          </div>
+          <div class="tag_privacidade">
+            <a href="privacidade.html">Política de Privacidade</a>
+          </div>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>copyright &copy;2022, <a href="#">DevEngers Tech</a></p>
+        </div>
+        </footer>
+
+    </div>
+
+  
+
+        
+
+        <script src="script.js"></script>
+</body>
+</html>

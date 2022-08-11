@@ -1,0 +1,92 @@
+/* Seção footer */
+footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* background: var(--corPreta); */
+    background-color:black;
+    width: 100vw;
+    height: 200px;
+    /* padding-top: 40px; */
+    color: var(--corRosa);
+    margin-top: 40px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    padding-right: 10px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    /* margin: 5px auto; */
+    line-height: 20px;
+    font-size: 1rem;
+    color: var(--corBranca);
+}
+
+.footer-menu{
+    float: right;
+    padding-top: 25px;
+}
+  
+.footer-menu ul{
+    display: flex;
+}
+  
+.footer-menu ul li{
+  padding-right: 15px;
+  display: block;
+  font-size: 1.4rem;
+}
+  
+.footer-menu ul li a{
+    color: var(--corBranca);
+    text-decoration: none;
+}
+  
+.footer-menu ul li a:hover{
+    color: var(--corRosa);
+}
+
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    /* padding: 5px; */
+    /* padding-bottom: 5px; */
+    text-align: center;
+}
+.footer-bottom p{
+   float: left;
+   font-size: 10px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@media (max-width:600px) {
+    .footer-menu ul {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+}

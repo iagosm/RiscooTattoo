@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+html body {
+    scroll-behavior: smooth;
+    /* min-height: 100%; */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+    --corAmarela: #F7941D;
+}
+
+/* Inicio Seção dos tatuadores */
+.secao-tatuadores {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-tatuadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.intro-tatuadores h2 {
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 2.8rem;
+    color: var(--corRosa);
+    letter-spacing: 4px;
+    padding-top: 50px;
+}
+
+.intro-tatuadores p {
+    padding: 10px;
+    text-align: justify;
+    line-height: 2;
+    font-size: 1rem;
+    padding-bottom: 35px;
+}
+
+/* Inicio dos tatuadores com breve apresentação */
+.info-tatuadores {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 300px;
+    padding: 0;
+}
+
+.info-tatuadores img {
+   display: flex;
+   padding-left: 150px;
+}
+
+.info-tatuadores .texto {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.texto p {
+    text-align: justify;
+}
+
+.texto h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.texto a {
+    border: 4px solid #fff;
+    border-radius: 10px;
+    width: 180px;
+    height: 35px;
+    background-color: var(--corRosa);
+    color: var(--corBranca);
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 8px;
+    margin-top: 40px;
+    margin-left: 220px;
+}
+
+.texto a:hover {
+    background-color: var(--corPreta);
+    border: 4px solid var(--corRosa);
+    color: #fff;
+}
+
+.btnagendar{
+display: block;
+}
+/* Wrapper e Galeria */
+.wrapper {
+	width: 90%;
+	margin: 100px;
+    margin-left: 260px;
+
+}
+
+div.galeria {
+	margin-top: 30px;
+}
+
+div.galeria ul {
+	list-style-type: none;
+	margin-left: 35px;
+}
+
+/* animação */
+div.galeria ul li, div.galeria li img {
+  	transition: all 0.8s ;
+    transform: scale(1.03);
+}
+
+div.galeria ul li {
+	position: relative;
+	float: left;
+	width: 350px;
+	height: 350px;
+	margin: 5px;
+	padding: 60px;
+	z-index: 0;
+}
+
+/* Fazer com que o index seja maior qunado passar o hover */
+/* Imagem passar por cima da outra - destaque */
+div.galeria ul li:hover {
+	z-index: 0;
+}
+
+/* Posição da imagem em baixo da lista */
+div.galeria ul li img {
+    z-index: 0;
+	position: absolute;
+	/* left: 5px;
+	top: 5px; */
+	border: 1px solid #dddddd;
+	padding: 10px;
+	width: 350px;
+	height: 350px;
+	background: #f0f0f0;
+    padding-left: 10px;
+}
+
+div.galeria ul li img:hover {
+	z-index: 0;
+    flex-wrap: wrap;
+    width: 400px;
+	height: 400px;
+	/* margin-top: -130px;
+	margin-left: -130px; */
+	/* top: 30%;
+	left: 18%; */
+    /* cursor: pointer; */
+}
+
+.dode, .maria, .alice {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+
+/* Seção videos */
+.secao-videos {
+    margin-top: 180px;
+    margin-left: 330px;
+    margin-right: 300px;
+}
+
+.secao-videos h2 {
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 2.8rem;
+    color: var(--corRosa);
+    letter-spacing: 4px;
+    padding-top: 200px;
+    text-align: center;
+}
+
+.video-container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1040px;
+    height: 590px;
+    position: relative;
+    padding-top: 100px;
+}
+
+/* Video Slider */
+.video-slider {
+    display: none;
+}
+
+/* Slide indivisual do container */
+.video-slide {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Slide de video - individual */
+.video-slide video {
+    width: 100%;
+    height: 590px;
+ }
+
+/* Navegação */
+.video-slider-btn {
+    border: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 100px;
+    padding: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 99999;
+    opacity: .7;
+    transition: all 350ms ease-in-out;
+}
+
+.video-slider-btn:hover {
+    opacity: 1;
+    transition: all 350ms ease-in-out;
+}
+
+.video-slider-btn.left-side {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+
+.video-slider-btn.right-side {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .secao-tatuadores {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .info-tatuadores {
+        display:flex;
+        flex-direction: column;
+        width:300px;
+        margin:auto;
+        padding: auto;
+        text-justify: center;
+    }
+    .info-tatuadores img {
+        padding:0;
+    }
+    .texto a {
+        border: 4px solid #fff;
+        border-radius: 10px;
+        width: 180px;
+        height: 35px;
+        background-color: var(--corRosa);
+        color: var(--corBranca);
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        margin:auto;
+    }
+    .wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    div.galeria ul li img {
+        border: 1px solid #dddddd;
+        width: 300px;
+        height: 300px;
+        background: #f0f0f0;
+    }
+    div.galeria ul li img:hover {
+        width: 320px;
+        height: 320px;
+        /* margin-top: -130px;
+        margin-left: -130px;
+        top: 30%;
+        left: 18%; */
+        cursor: pointer;
+    }
+      
+}

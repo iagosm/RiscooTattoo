@@ -1,0 +1,169 @@
+/* ----------------------------------------------------------- */
+/* Configurações gerais */
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+html body {
+    scroll-behavior: smooth;
+    
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+}
+/* Fim das Configurações gerais */
+/* ----------------------------------------------------------- */
+
+.artistas{
+    padding-top: 50px;
+    color: var(--corRosa);
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* inicio card */
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Tatuador{
+    height: 40%;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-color: aqua;
+    border-radius: 15px 15px 0 0;
+}
+
+.conteudo{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(72, 39, 117);
+}
+
+.artista1 {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 120vh;
+    
+}
+
+.texto{
+    background-color: beige;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+    color: black;
+}
+
+.nome{
+    color: var(--corRosa);
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.port{
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+    
+}
+
+/* O estilo para ul, abaixo, estava afetando o navbar */
+.port ul{
+    background-color: aqua;
+    
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 90px auto; */
+    padding-left:10rem;
+}
+
+#imgart{
+    margin-right:30px;
+}
+
+.min{
+    width: 200px;
+    padding: 10px;
+}
+
+.lbox{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lbox img{
+    height: 50rem;
+}
+
+.lbox:target{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(206, 206, 206, 0.418);
+
+    position: fixed;
+}
+
+.box_img{
+    width: 1000px;
+    margin: 150px auto;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#prev{
+    left: 5%;
+    top: 45%;
+}
+
+#next{
+    right: 5%;
+    top: 45%;
+}
+
+#close{
+    top: 5;
+    right: 4%;
+}
+
+.box_img{
+    opacity: 0;
+}
+
+.lbox:target .box_img {
+    opacity: 1;
+    transition: opacity .4% linear;
+}
+
+
+
+
+
+
+

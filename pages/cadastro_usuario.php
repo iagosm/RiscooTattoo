@@ -1,0 +1,136 @@
+<?php
+include_once 'conexao.php';
+
+if (isset($_POST['submit'])) 
+{
+    $valido=false;
+    echo"<br><br><br><br><br><h1>clicou no botão</h1>";
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    
+    $senha = $_POST['senha'];
+    
+    
+    echo"nome:  ".$nome."<br>";
+    echo"sobrenome:  ".$sobrenome."<br>";
+    echo"cpf:  ".$cpf."<br>";
+    echo"email:  ".$email."<br>";
+    echo"senha:  ".$senha."<br>";
+    
+    if (!is_numeric($cpf)){
+      echo"Invalid CPF<br>";
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo"Invalid email format<br>";
+    }
+    if(is_numeric($cpf) and filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $valido=true;
+    }
+    
+    if ($valido){
+      $sql = "INSERT INTO users (nome, sobrenome, cpf, email, senha,tipo) VALUES 
+         ('$nome','$sobrenome','$cpf','$email','$senha','user')";
+      echo"sql:   ".$sql."<br>";
+      $resultado = $conexao->query($sql);
+      echo"resultado:  ".$resultado;
+    } 
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro_usuario.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <!--Menu html (colar após o body)-->
+    <header>
+        <a href="../index.html"><img src="../img/logo.png" /></a>
+        <nav class="menu">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="artistas.html">Tatuadores</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+          </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="artistas.html">Tatuadores</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+          </ul>
+        </div>
+    </header>
+    <!--Fim menu-->
+      
+
+    <div class="cadastro">
+      <p>Cadastro de usuário</p>
+      <form action="cadastro_usuario.php" method="POST">
+          <label for="nome">Nome</label><br>
+          <input type="text" name="nome" id="nome" class="box"><br>
+          <label for="sobrenome">Sobrenome</label><br>
+          <input type="text" name="sobrenome" id="sobrenome" class="box"><br>
+          <label for="cpf" >CPF</label><br>
+          <input type="text" name="cpf" id="cpf" maxlength="11" class="box"><br>
+          <label for="mobile" >Telefone celular DDD9xxxxxxxx</label><br>
+          <input type="text" name="mobile" id="mobile" maxlength="12" class="box"><br>
+
+          <label for="email">Email</label><br>
+          <input type="email" name="email" id="email" class="box"><br>
+          <label for="conferir_email">Conferir Email</label><br>
+          <input type="email" name="conferir_email" id="conferir_email" class="box"><br>
+          <label for="senha">Senha</label><br>
+          <input type="password" name="senha" id="senha" class="box"><br>
+          <label for="conferir_senha">Conferir senha</label><br>
+          <input type="password" name="conferir_senha" id="conferir_senha" class="box"><br>
+          
+          <p>Captcha de operação matemática simples</p>
+          <p>Qual é o resultado de 5+3</p>
+          <input type="text" name="captcha" id="captcha">
+
+          <br><br>
+          
+          <input type="submit" value="submit" name="submit">
+      </form>
+      <br><br><br>
+      <!-- Seção do footer -->
+    <footer>
+      <div class="footer-content">
+        <h3>Riscô Tattoo</h3>
+        <p>Estúdio de Tatuagem.</p>
+
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/artistas.html">Tatuadores</a></li>
+            <li><a href="pages/agendamento.html">Agendamento</a></li>
+          </ul>
+        </div>
+        <div class="tag_privacidade">
+          <a href="pages/privacidade.html">Política de Privacidade</a>
+        </div>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2022, <a href="#">DevEngers Tech</a></p>
+      </div>
+    </footer>
+    </div>
+
+      <script src="../js/script.js"></script>
+      <script src="../js/login.js"></script>
+</body>
+</html>

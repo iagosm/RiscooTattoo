@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --corRosa: #b31545;
+    --corCreme: #e5d7a6;
+    --corBranca: #fff;
+    --corPreta: #000;
+  }
+
+
+body{
+    
+    background-image: url(teste.jpg) ;
+    background-size: cover;
+    display: flex;
+    /* Display Flex faz com que os itens fiquem em formato fileira  */
+    flex-direction: column;
+    /* O direcionamento  column deixa eles arrumados */
+    g
+    /* justify-content controla alinhamento na horizontal  */
+    justify-content: center;
+    /* align-items controla alinhamento vertical  */
+    align-items: center;
+    height: 100vh;
+}
+img{
+  
+    
+}
+.box{
+    background: rgb(0, 0, 0, 0.5);
+    width: 20%;
+    padding: 15px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+h1{
+    color: white;
+    font-size: 20px;
+}
+header {
+  background-color: black;
+  width: 100%;
+  height: 75px;
+  margin-bottom: 100px;
+  border-bottom: #b31545 5px solid;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+header a img {
+  width: 100px;
+  position: auto;
+  margin-top: 0px;
+  padding: 0px;
+  margin-left: 15px;
+  }
+
+.menu ul {
+  list-style: none;
+  text-transform: uppercase;
+  height: 100%;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu li {
+  font-family: 'Allerta Stencil', sans-serif;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+}
+
+.menu a {
+  color: #b31545;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: white;
+  text-shadow: 2px 1px 1px #e5d7a6;
+  text-decoration: line-through;
+  transition: 500ms linear;
+  cursor: pointer;
+}
+/*Fim menu*/
+ /*Menu Hamburger*/
+ #hamburger-icon {
+  margin: auto 25px ;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #b31545;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color:black;
+ 
+}
+
+.mobile-menu {
+  display: none;
+  position:fixed; 
+  z-index: 5;
+  padding: 40px;
+  top: 109px;
+  left: 0px;
+  height: 100vh;
+  /* border-bottom: #b31545 5px solid; */
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 50px;
+  margin-left: -40px;
+  display: inline-block;
+  list-style: none;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #b31545
+}
+
+.mobile-menu a:hover {
+  color: white;
+  text-shadow: 2px 1px 1px #e5d7a6;
+  text-decoration: line-through;
+  transition: 500ms linear;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  header nav {
+      display: none;
+  }
+  #hamburger-icon {
+      display: block;
+  }
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+      }
+      .box{
+        width: 21.875rem;
+        height: 31.25rem;
+        background: inherit;
+        position: absolute;
+        overflow: hidden;
+        top: 40%;
+        left: 50%;
+        margin-left: -175px;
+        margin-top: -50px;
+        border-radius: 8px;
+        padding: 20px 0;
+      }
+      
+    

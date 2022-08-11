@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../footerFinal.css">
+    <link rel="stylesheet" href="../css/agendamento.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <!--Menu html (colar após o body)-->
+    <header>
+      <a href="../index.html"><img src="../img/logo.png" /></a>
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="artistas.html">Tatuadores</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Fim menu-->
+
+    <main>
+      <div id="container">
+        <form id="login-form-id" action="../php/testlogin.php" method="POST">
+          <img src="../img/logo.png" /><br />
+          <input
+            name="login-input"
+            type="text"
+            value=""
+            placeholder="Login"
+            required
+            autofocus
+          /><br />
+          <input
+            name="password-input"
+            type="password"
+            placeholder="Senha"
+            required
+          /><br />
+          <input type="submit" value="Entrar" name="submit"/><br />
+          <span><a href="./cadastro.html">Cadastre-se</a></span>
+
+        </form>
+      </div>
+    </main>
+    
+<!-- Seção do footer -->
+<footer>
+  <div class="footer-box">
+  <h4>Riscô Tatto<span>Estúdio de Tatuagem</span></h4>
+  <div class="nav">
+    <a href="">Home</a>
+    <a href="">Tatuadores</a>
+    <a href="">Agendamento</a>
+    </div>
+    <p><i>Copyright &copy; DevEnger's</i></p>
+  </div>
+  </footer>
+
+
+    <script src="../js/script.js"></script>
+    
+    <!-- bypass na autenticação que ocorre pelo javascript -->
+    <!-- <script src="../js/login.js"></script> -->
+  </body>
+</html>
